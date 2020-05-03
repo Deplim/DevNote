@@ -5,14 +5,13 @@ chrome extension 에 사용되는 oauth 의 자료가 필요하면 https://devel
 
 -----------------------------------------------------
 
-oauth2 는 federated identity(https://en.wikipedia.org/wiki/Federated_identity) 
-을 하게 해주는 방법 중 하나이며 access token 을 받기까지 과정은 다음과 같이 정리할 수 있습니다.
-
-용어정리:
+용어정리 > 
 * resource owner : 브라우저를 사용하는 일반이용자
 * client : 웹 서비스를 제공하고 있는 서버
 * resource owner : client가 resource owner 의 허락을 받아 사용하려고 하는 자원을 가지고 있는 대상 서버 (google, facebook, twitter 등)
 
+oauth2 는 federated identity(https://en.wikipedia.org/wiki/Federated_identity) 
+을 하게 해주는 방법 중 하나이며 access token 을 받기까지 과정은 다음과 같이 정리할 수 있습니다.
 
 1. resource owner 가 client 에서 제공하는 웹사이트에서 oauth 승인 url 을 클릭
    -> resource server 로 client id, redirect url, scope 등이 전달됩니다.
