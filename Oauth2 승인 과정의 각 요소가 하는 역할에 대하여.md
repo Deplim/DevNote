@@ -26,7 +26,7 @@ oauth2 는 federated identity(https://en.wikipedia.org/wiki/Federated_identity)
    -> 보낸 정보가 resource server 에 저장된 정보와 모두 일치하면 response 로 access token 을 받을 수 있습니다.
    
 
-#####각 과정의 요소들이 없다면?:
+##### 각 과정의 요소들이 없다면?:
 (**지극히 개인적인 관점에서 설명**)
 
 1. client id 개념 없이 유저 승인만으로 access token 을 발급해주면 어떻게 될까 ?
