@@ -37,6 +37,6 @@ oauth2 는 federated identity(https://en.wikipedia.org/wiki/Federated_identity)
 응답으로 받은 redirect url 에서 outhorization code 도 볼 수 있으므로, 만약 client secret 이 타인에게 노출된다면 access token 발급 요청
 url 을 만들 수 있어 매우 위험한 상황이 된다.
 
-4. owner 에게 승인을 받는 과정과 client 가 resource server 의 승인을 받는 과정이 분리되어있어야하는 이유.
+4. owner 에게 승인을 받는 과정과 client 가 resource server 의 승인을 받는 과정이 분리되어 있지 않다면?
 >> 만약 owner 승인 이후에 redirect url 에게 post data 로 바로 access 토근을 주면 resource owner 가 access token 을 직접 볼 수 있는데,
 악용될 가능성과 , 심지어 실제 resource owner 가 아닌 사람이 볼 가능성도 있을 것. 
