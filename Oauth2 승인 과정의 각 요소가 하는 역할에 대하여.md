@@ -17,7 +17,7 @@ oauth2 는 federated identity(https://en.wikipedia.org/wiki/Federated_identity)
 >> resource server 로 client id, redirect url, scope 등이 전달됩니다.
    
 2. resource server 에서 client id 와 redirect url 이 등록되어있는지 확인합니다. 
-2.1 resource owner 에게 동의 화면을 띄우고, 승인받는다면 resource server 에 user id 와 scope 가 저장됩니다.
+resource owner 에게 동의 화면을 띄우고, 승인받는다면 resource server 에 user id 와 scope 가 저장됩니다.
 >> owner 에게 redirect 주소와 함께 "outhorization code" 를 붙여서 응답 해더로 보내고, 해당 url 로 이동하게 합니다.
    
 3. outhorization code 를 받은 client 서버는 (redirect url 도메인은 client 서버일것) 직접 resource server 에 직접 요청을 보냅니다. 
