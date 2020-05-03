@@ -2,6 +2,7 @@
 
 (본 내용은 웹 서비스에서 사용하는 oauth 를 대상으로 함.
 chrome extension 에 사용되는 oauth 의 자료가 필요하면 https://developer.chrome.com/extensions/tut_oauth 를 참고하면 됩니다.)
+
 -----------------------------------------------------
 
 oauth2 는 federated identity(https://en.wikipedia.org/wiki/Federated_identity) 
