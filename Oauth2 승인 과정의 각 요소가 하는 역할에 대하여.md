@@ -22,8 +22,9 @@ oauth2 는 federated identity(https://en.wikipedia.org/wiki/Federated_identity)
    
 3. outhorization code 를 받은 client 서버는 (redirect url 도메인은 client 서버일것) 직접 resource server 에 직접 요청을 보냅니다. 
 >> 여기서 client id, authorization code, client secret, redirect url 가 전달됩니다.
->> 보낸 정보가 resource server 에 저장된 정보와 모두 일치하면 response 로 access token 을 받을 수 있습니다.
-   
+>> 보낸 정보가 resource server 에 저장된 정보와 모두 일치하면 response 로 access token 을 받을 수 있습니다.  
+  
+<br/>
 #### 각 과정의 요소들이 없다면?:
 (*지극히 개인적인 관점에서 설명*)
 
