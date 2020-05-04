@@ -40,6 +40,3 @@ url 을 만들 수 있어 매우 위험한 상황이 된다.
 4. owner 에게 승인을 받는 과정과 client 가 resource server 의 승인을 받는 과정이 분리되어 있지 않다면?
 >> 만약 owner 승인 이후에 redirect url 에게 post data 로 바로 access 토근을 주면 resource owner 가 access token 을 직접 볼 수 있는데,
 악용될 가능성과 , 심지어 실제 resource owner 가 아닌 사람이 볼 가능성도 있을 것. 
-
-5. access key 요청 과정 없이 outhorization 정보를 를 암호화해서 전달하고 미리 client 에 부여해둔 키로 풀면 access key 를 만들 수 있도록 하면 어떨까?
->> 이러면 resource server 가 아닌 다른 쪽에서 자신들이 조작한 outhorization 정보와 함께 redirect url 에 요청을 보낼 수 있을 것.
