@@ -1,0 +1,73 @@
+> [광주 인공지능 사관학교 | 머신러닝 - 분류 문제](http://precourse.gj-aischool.com/lectures/10)
+	
+### Classification
+
+* 퍼셉트론 (Perceptron) : 여러개의 입력을 받아 각각의 값에 가중치를 곱한것을 모두 더한 값이 출력되는 모델
+	> 신경망이나 딥러닝의 뿌리가 되는모델
+
+ * 선형 분리 불가능 문제의 데이터셋에서는 수렴하지 못한다.
+
+-------------------------
+
+* 로지스틱 회귀 : 퍼셉트론의 간단함은 유지하고 선형 분리 불가능 문제를 해결할 수 있는 모델
+	> 분류를 확률로 생각하는 방식
+	
+* 로지스틱 시그모이드 함수 :  입력값에 대해 어느 클래스에 분류 되는지 구하는데 쓰이는 함수
+![시그모이드 함수](https://github.com/Deplim/DevNote/blob/master/Image/%EC%8B%9C%EA%B7%B8%EB%AA%A8%EC%9D%B4%EB%93%9C%ED%95%A8%EC%88%98.PNG?raw=true)
+
+* z: 가중치와 데이터 변수의 선형 조합으로 이뤄진 최종 입력
+
+* 여기서의 가중치 조정 또한 목적함수를 정의하여 이를 최소화하는 상태를 찾으면 된다.
+![로지스틱 회귀](https://github.com/Deplim/DevNote/blob/master/Image/%EB%A1%9C%EC%A7%80%EC%8A%A4%ED%8B%B1%20%ED%9A%8C%EA%B7%80.PNG?raw=true)
+
+* 결정경계 : 분류하는 기준이 되는 선
+	* z 의 차수를 늘리면 곡선형태의 결정경계 구축
+
+--------------------------------
+
+* 서포트 벡터 머신(Support Vector Machine) : SVN
+: 마진을 최대화한다.
+	1. 초평면(결정경계) 생성
+	2. 마진 (초평면과 가장 가까운 훈련 데이터들 사이의 거리로 정의)
+	
+* 단순히 훈련 데이터의 분류만 필요하다면 로지스틱 회귀를 쓰겠지만, 일반화를 진행했을 때 오차를 낮추기 위해 서포트 벡터 머신 사용
+
+* 선형 분리 불가능 문제에서 "서포트 벡터 머신"은 차원을 확장해 분리 가능 공간을 생성하고 이를 다시 2차원으로 옮겨와 비선형 결정 경계를 생성한다.
+
+* 그러나 이 또한 계산 비용의 문제가 있다. 이를 조금이나마 줄이고자 등장한것이 "커널 기법"
+
+ * A Tutorial on Support Vector Machines for Pattern Recognition
+ 
+ ------------------------------------
+* 결정 트리 학습 (Decision tree) : 
+	* 일련의 질문에 대한 결정을 통해 데이터를 분해하는 모델
+	* 훈련 데이터에 있는 변수 즉 특성을 기반으로 새로운 샘플의 클레스 레이블을 추정할 수 있도록, 일련의 질문을 학습.
+![정보 이득](https://github.com/Deplim/DevNote/blob/master/Image/%EC%A0%95%EB%B3%B4%20%EC%9D%B4%EB%93%9D.PNG?raw=true)
+
+	> 정보이득 : (부모 노드의 불순도) - (자식 노드 합의 불순도)
+	
+
+	* 범주형 변수, 실수형 변수
+	* 정보 이득(Information Gain, IG) : 트리의 루트에서 시작하여 이 값이 최대가 되는 특성으로 데이터를 나눈다. > 리프 노드가 순수해질 때 까지 분할 작업 반복.
+	* 결정 트리 과적합 : 자식노드의 불순도가 0이 될때까지 계속 자식 노드를 생성하다보면 너무 깊어짐 > 트리 최대의 깊이를 제한
+	 (트리 가지치기 = pruning)
+	* 목적함수의 목적 : 정보 이득 최대화
+	* 일반적으로 결정 트리는 이진트리 사용함.
+	
+	* 분할 기법, 불순도 지표 종류
+![불순도 지표](https://github.com/Deplim/DevNote/blob/master/Image/%EB%B6%88%EC%88%9C%EB%8F%84%20%EC%A7%80%ED%91%9C%20%EC%A2%85%EB%A5%98.PNG?raw=true)
+		1. 엔트로피 
+![엔트로피](https://github.com/Deplim/DevNote/blob/master/Image/%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BC.PNG?raw=true)
+		3. 지니 불순도	![지니 불순도](https://github.com/Deplim/DevNote/blob/master/Image/%EC%A7%80%EB%8B%88%EB%B6%88%EC%88%9C%EB%8F%84.PNG?raw=true)
+		4. 분류 오차![분류오차](https://github.com/Deplim/DevNote/blob/master/Image/%EB%B6%84%EB%A5%98%20%EC%98%A4%EC%B0%A8.PNG?raw=true)
+
+* K - 근접 이웃 (K - Nearest Neighber)
+	올바른 파라미터를 찾기위해 학습을 하고 그 이후에는 학습 데이터를 제거하는 다른 모델들과 달리, 학습이란 개념이 없다.
+	
+	* 알고리즘을 실행할때 마다 모든 학습데이터를 통해 분류를 진행
+![KNN](https://github.com/Deplim/DevNote/blob/master/Image/KNN.PNG?raw=true)
+	* 고차원 데이터의 경우 계산 복잡도가 훈련 데이터의 수에 따라 증가
+
+	* 과적합과 과소적합 사이에 올바른 K 를 찾는것이 매우 중요
+
+	* 차원의저주를 해소하기 위해 차원 축소 기법 사용
