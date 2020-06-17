@@ -14,4 +14,4 @@
 
 4주차 과제 (2020.06.17 작성)
 -----------------------------
-* [딥러닝 용어 정리, ㅋ르론 코딩, 딥러닝 순전파 & 역전파 계산](https://github.com/Deplim/DevNote/blob/master/AI_%EA%B4%91%EC%A3%BC_Online_%EA%B3%BC%EC%A0%9C/4%EC%A3%BC%EC%B0%A8_%EA%B3%BC%EC%A0%9C.ipynb)
+* [딥러닝 용어 정리, 클론 코딩, 딥러닝 순전파 & 역전파 계산](https://github.com/Deplim/DevNote/blob/master/AI_%EA%B4%91%EC%A3%BC_Online_%EA%B3%BC%EC%A0%9C/4%EC%A3%BC%EC%B0%A8_%EA%B3%BC%EC%A0%9C.ipynb)
