@@ -11,3 +11,7 @@
 3주차 과제 (2020.06.17 작성)
 -----------------------------
 * [학습률 최적화, 군집 분석 구현, Cost Function 구현](https://github.com/Deplim/DevNote/blob/master/AI_%EA%B4%91%EC%A3%BC_Online_%EA%B3%BC%EC%A0%9C/3%EC%A3%BC%EC%B0%A8_%EA%B3%BC%EC%A0%9C.ipynb)
+
+4주차 과제 (2020.06.17 작성)
+-----------------------------
+* [딥러닝 용어 정리, ㅋ르론 코딩, 딥러닝 순전파 & 역전파 계산](https://github.com/Deplim/DevNote/blob/master/AI_%EA%B4%91%EC%A3%BC_Online_%EA%B3%BC%EC%A0%9C/4%EC%A3%BC%EC%B0%A8_%EA%B3%BC%EC%A0%9C.ipynb)
